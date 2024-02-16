@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { getAllAdverts } from '../../redux/adverts/advert-selectors';
 import {
@@ -16,6 +16,11 @@ const CarCard = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const adverts = useSelector(getAllAdverts);
+
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
+
 
   const toggleFavorite = id => {
     setFavorites(prev =>
@@ -63,11 +68,6 @@ const CarCard = () => {
                 )}
               </FavoriteButton>
             </StyledImageThumb>
-
-            {/* <img src={img} alt={make} />
-            <FavoriteButton  onClick={() => toggleFavorite(id)}>
-            <FavoriteIcon isFavorite={favorites.includes(id)} />
-            </FavoriteButton > */}
             <div>
               <h2>
                 {make} {model},{year}
@@ -85,10 +85,9 @@ const CarCard = () => {
         )
       )}
       {modalOpen && (
-        <Modal close={closeModal}>
+        <Modal close={closeModal} >
           <div>
-            <h2>Modal Content</h2>
-            <button onClick={closeModal}>Close</button>
+            <h2>Modal ContentModal ContentModal Content</h2>
           </div>
         </Modal>
       )}
