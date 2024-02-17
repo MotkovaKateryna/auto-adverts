@@ -9,7 +9,12 @@ import { StyledListWrap } from 'modules/CarsList/CarsList.styled';
 const FavoritesPage = () => {
  const [favorites, setFavorites] = useState([]);
  const adverts = useSelector(getAllAdverts);
-
+const toggleFavorite = id => {
+    setFavorites(prev =>
+      prev.includes(id) ? prev.filter(favId => favId !== id) : [...prev, id]
+    );
+  };
+  
   useEffect(() => {
     const storedFavorites = localStorage.getItem('favorites');
     if (storedFavorites) {
@@ -17,11 +22,7 @@ const FavoritesPage = () => {
     }
   }, []);
 
-  const toggleFavorite = id => {
-    setFavorites(prev =>
-      prev.includes(id) ? prev.filter(favId => favId !== id) : [...prev, id]
-    );
-  };
+  
   const favoriteCars = adverts.filter(advert => favorites.includes(advert.id));
 
 

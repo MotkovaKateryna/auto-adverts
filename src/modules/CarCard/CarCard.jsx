@@ -12,21 +12,22 @@ import {
 import Modal from 'shared/Modal/Modal';
 
 const CarCard = () => {
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState(() => {
+    const savedFavorites = localStorage.getItem('favorites');
+    return savedFavorites ? JSON.parse(savedFavorites) : [];
+  });
   const [modalOpen, setModalOpen] = useState(false);
 
   const adverts = useSelector(getAllAdverts);
-
-  useEffect(() => {
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-  }, [favorites]);
-
-
   const toggleFavorite = id => {
     setFavorites(prev =>
       prev.includes(id) ? prev.filter(favId => favId !== id) : [...prev, id]
     );
   };
+
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
 
   const openModal = () => {
     setModalOpen(true);
