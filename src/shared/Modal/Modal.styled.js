@@ -6,6 +6,20 @@ import { HiX } from 'react-icons/hi';
 
 export const StyledOverlay = styled.div`
   position: fixed;
+    top: 0px;
+    left: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: auto;
+    z-index: 1;
+    background-color: ${baseTheme.colors.overlayBcg};
+  
+  /* position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -17,7 +31,7 @@ export const StyledOverlay = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 1200;
+  z-index: 1200; */
 `;
 // export const StyledOverlay = styled.div`
 // position: fixed;
@@ -35,19 +49,13 @@ export const StyledOverlay = styled.div`
 // `
 
 export const StyledModal = styled.div`
-  width: 541px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 40px;
-  border-radius: 24px; 
-  max-width: calc(100% - 48px);
-  max-height: calc(100% - 24px);
-
-  border: 1px solid #3f51b5;
-  overflow: scroll;
-  background-color: ${baseTheme.colors.white};
+    width: 541px;
+    padding: 40px;
+    position: relative;
+    overflow-y: auto;
+    border-radius: 24px;
+    background-color: white;
+    
 `;
 
 // export const StyledModal = styled.div`
@@ -66,14 +74,11 @@ position: absolute;
   right: 15px;
   cursor: pointer;
   color: #3f51b5;
-  border: 1px solid #3f51b5;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(242, 239, 245);
 `
 export const Button = styled.button`
   color: ${baseTheme.colors.white};

@@ -4,13 +4,12 @@ import { baseTheme } from '../../constants/baseTheme';
 export const ImageThumb = styled.div`
   overflow: hidden;
   position: relative;
-  width: 461px;
   height: 248px;
   border-radius: 14px;
   background: ${baseTheme.colors.borderGrey};
 
   & img {
-    width: 461px;
+    width: 100%;
     min-height: 248px;
     position: absolute;
     top: 50%;
