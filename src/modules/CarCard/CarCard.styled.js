@@ -52,6 +52,7 @@ export const InfoWrap = styled.div`
 `;
 
 export const Button = styled.button`
+width: 100%;
   color: ${baseTheme.colors.white};
   font-size: 14px;
   font-weight: 600;
