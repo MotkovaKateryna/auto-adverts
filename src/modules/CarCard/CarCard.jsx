@@ -12,6 +12,7 @@ import {
   StyledImg,
   Title,
   Button,
+  ButtonRent,
 } from './CarCard.styled';
 import Modal from 'shared/Modal/Modal';
 import { ModalCard } from 'shared/ModalCard/ModalCard';
@@ -26,9 +27,14 @@ const CarCard = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const adverts = useSelector(getAllAdverts);
   const toggleFavorite = id => {
-    setFavorites(prev =>
-      prev.includes(id) ? prev.filter(favId => favId !== id) : [...prev, id]
-    );
+    setFavorites(prevFavorites => {
+      const isFavorite = prevFavorites.includes(id);
+      if (isFavorite) {
+        return prevFavorites.filter(favId => favId !== id);
+      } else {
+        return [...prevFavorites, id];
+      }
+    });
   };
 
   useEffect(() => {
@@ -36,9 +42,7 @@ const CarCard = () => {
   }, [favorites]);
 
   const openModal = (car) => {
-    console.log(car);
     setSelectedCar(car);
-    console.log(selectedCar);
     setModalOpen(true);
   };
 
@@ -95,9 +99,8 @@ const CarCard = () => {
       {modalOpen && selectedCar && (
         <Modal close={closeModal}>
           <ModalCard car={selectedCar}/>
-          <Button type="button" onClick={() => {}}>
-              Rental car
-            </Button>
+          <ButtonRent  href="tel:+380730000000" class="btn">Rental car
+            </ButtonRent>
         </Modal>
       )}
     </>

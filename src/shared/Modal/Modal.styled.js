@@ -3,7 +3,6 @@ import { baseTheme } from '../../constants/baseTheme';
 
 import { HiX } from 'react-icons/hi';
 
-
 export const StyledOverlay = styled.div`
   position: fixed;
     top: 0px;
@@ -18,35 +17,8 @@ export const StyledOverlay = styled.div`
     overflow-y: auto;
     z-index: 1;
     background-color: ${baseTheme.colors.overlayBcg};
-  
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: ${baseTheme.colors.overlayBcg};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 1200; */
 `;
-// export const StyledOverlay = styled.div`
-// position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   width: 100ww;
-//   height: 100wh;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: rgba(0, 0, 0, 0.8);
-//   z-index: 1200;
-// `
+
 
 export const StyledModal = styled.div`
     width: 541px;
@@ -57,17 +29,6 @@ export const StyledModal = styled.div`
     background-color: white;
     
 `;
-
-// export const StyledModal = styled.div`
-// position: fixed;
-//   max-width: 541px;
-//   max-height: calc(100% - 24px);
-//   border-radius: 5px;
-//   border: 1px solid #3f51b5;
-//   background-color: ${baseTheme.colors.white};
-//   overflow: hidden;
-//   z-index:1200;
-// `
 export const StyledCloseBtn = styled.div`
 position: absolute;
   top: 15px;

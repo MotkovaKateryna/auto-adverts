@@ -112,3 +112,23 @@ export const Description = styled.div`
     padding-left: 6px;
   }
 `;
+
+
+export const ButtonRent = styled.a`
+  color: ${baseTheme.colors.white};
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: calc(20 / 16);
+  padding: 12px 50px;
+  border: none;
+  border-radius: 12px;
+  background-color: ${baseTheme.colors.blue};
+  transition: background-color 250ms ${baseTheme.animation.cubicBezier};
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: ${baseTheme.colors.darkblue};
+  }
+`;
