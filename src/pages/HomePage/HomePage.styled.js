@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 
+
 export const Container = styled.div`
   width: 320px;
   margin: 0 auto;
@@ -19,5 +20,5 @@ export const Container = styled.div`
 
     
     export const HomeWrap = styled.div`
-      padding: 150px 0;
+      padding: 10px 0;
     `;
