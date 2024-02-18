@@ -29,8 +29,7 @@ const CatalogPage = () => {
 
   useEffect(() => {
     setLoading(true);
-    // Здесь вызывайте вашу функцию для загрузки данных
-    // После загрузки данных:
+   
     setLoading(false);
   }, []);
 

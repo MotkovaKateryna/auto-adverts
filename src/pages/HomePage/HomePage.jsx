@@ -1,10 +1,6 @@
 import React from 'react';
 import { CarImage, Container, HomePageContainer, ImageContainer, RedirectButton } from './HomePage.styled';
 
-
-
-
-
 const HomePage = () => {
 
   const carImages = [

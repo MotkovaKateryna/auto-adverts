@@ -1,9 +1,5 @@
-
 import { createSlice } from '@reduxjs/toolkit';
-// import { showSuccessMessage } from 'shared/utils/notifications';
-
-import { fetchAdverts} from './advert-operations';
-
+import { fetchAdverts } from './advert-operations';
 
 const handlePending = state => {
   state.isLoading = true;
@@ -29,7 +25,7 @@ const advertsSlice = createSlice({
         state.error = null;
         state.items = action.payload;
       })
-      .addCase(fetchAdverts.rejected, handleRejected)
+      .addCase(fetchAdverts.rejected, handleRejected);
   },
 });
 

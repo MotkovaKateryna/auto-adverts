@@ -99,7 +99,7 @@ const CarCard = () => {
       {modalOpen && selectedCar && (
         <Modal close={closeModal}>
           <ModalCard car={selectedCar}/>
-          <ButtonRent  href="tel:+380730000000" class="btn">Rental car
+          <ButtonRent  href="tel:+380730000000">Rental car
             </ButtonRent>
         </Modal>
       )}

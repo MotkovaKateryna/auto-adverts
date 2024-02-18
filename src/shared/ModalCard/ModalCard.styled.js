@@ -49,8 +49,7 @@ export const MainInfo = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  /* row-gap: 4px; */
-  margin-bottom: 4px;
+   margin-bottom: 4px;
 
   & p {
     color: rgba(18, 20, 23, 0.5);
@@ -76,7 +75,6 @@ export const AccessoriesWrap = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  /* row-gap: 4px; */
   margin-bottom: 4px;
 
   & p {
