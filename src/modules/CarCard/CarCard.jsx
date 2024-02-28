@@ -28,7 +28,8 @@ const CarCard = () => {
 
   const adverts = useSelector(getAllAdverts);
 const makeFilter = useSelector(selectMakeFilter);
-// const priceFilter = useSelector(selectPriceFilter);
+const priceFilter = useSelector(selectPriceFilter);
+console.log(priceFilter);
 
 const filteredCars = adverts.filter(car =>  car.make.includes(makeFilter));
   const toggleFavorite = id => {
