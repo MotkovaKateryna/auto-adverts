@@ -12,11 +12,11 @@ import {
 // import storage from "redux-persist/lib/storage"; 
 
 import { advertsReducer} from "./adverts/advert-slice";
-// import filterReducer from "./filter/filter-slice";
+import filterReducer from "./filter/filter-slice";
 
 export const rootReducer = combineReducers({
   adverts: advertsReducer,
-    //   filter: filterReducer,
+  filter: filterReducer,
 })
 
 export const store = configureStore({

@@ -16,16 +16,21 @@ import {
 } from './CarCard.styled';
 import Modal from 'shared/Modal/Modal';
 import { ModalCard } from 'shared/ModalCard/ModalCard';
+import { selectMakeFilter, selectPriceFilter } from '../../redux/filter/filter-selectors';
 
 const CarCard = () => {
   const [selectedCar, setSelectedCar] = useState(null);
-  
+  const [modalOpen, setModalOpen] = useState(false);  
   const [favorites, setFavorites] = useState(() => {
     const savedFavorites = localStorage.getItem('favorites');
     return savedFavorites ? JSON.parse(savedFavorites) : [];
   });
-  const [modalOpen, setModalOpen] = useState(false);
+
   const adverts = useSelector(getAllAdverts);
+const makeFilter = useSelector(selectMakeFilter);
+// const priceFilter = useSelector(selectPriceFilter);
+
+const filteredCars = adverts.filter(car =>  car.make.includes(makeFilter));
   const toggleFavorite = id => {
     setFavorites(prevFavorites => {
       const isFavorite = prevFavorites.includes(id);
@@ -52,7 +57,7 @@ const CarCard = () => {
 
   return (
     <>
-      {adverts.map(
+      {filteredCars.map(
         (car) => {
           const [city, country] = car.address.split(',').slice(-2);
           return (

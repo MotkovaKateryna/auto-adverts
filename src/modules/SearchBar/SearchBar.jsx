@@ -1,8 +1,9 @@
-// const { default: DropdownComponent } = require("modules/DropDown/DropDown")
+import DropdownComponent from "modules/DropDown/DropDown";
+
 const SearchBar = () => {
     return(
 <>
-{/* <DropdownComponent/> */}
+<DropdownComponent/>
 </>
     )
 }

@@ -1,49 +1,61 @@
 import React, { useState } from 'react';
-// import Select from 'react-select';
+import Select from 'react-select';
 
-import { Dropdown, DropdownOption } from './DropDown.styled';
-import makes from "./makes";
-// const { v4: uuidv4 } = require('uuid');
+import {
+  // Dropdown,
+  // DropdownOption,
+  DropdownWrap,
+  // Label,
+  SearchButton,
+  // SelectWrap,
+} from './DropDown.styled';
+import makes from './makes';
+import { useDispatch } from 'react-redux';
+import { setMakeFilter, setPriceFilter} from '../../redux/filter/filter-slice';
 
+const priceOption = Array.from({ length: 20 }).map((_, index) => ({
+  value: 30 + 10 * index,
+  label: `$${30 + 10 * index}`,
+}));
+
+const makeOption = makes.map(car => ({
+  value: car.value,
+  label: car.label,
+}));
 
 const DropdownComponent = () => {
   const [selectedMakesOption, setSelectedMakesOption] = useState('');
   const [selectedPriceOption, setSelectedPriceOption] = useState('');
+  const dispatch = useDispatch();
 
-  const handleChange = (e, dropdown) => {
-    const value = e.target.value;
-  
-    if (dropdown === 'makes') {
-      setSelectedMakesOption(value);
-    } else if (dropdown === 'price') {
-      setSelectedPriceOption(value);
-    }
+  const handleSubmit = e => {
+    e.preventDefault();
+    dispatch(setMakeFilter(selectedMakesOption?.value ?? ''));
+    dispatch(setPriceFilter(selectedPriceOption?.value ?? ''));
   };
-console.log(selectedMakesOption,selectedPriceOption);
-
-  const makesAll = makes.map((item, index) => (
-    <DropdownOption key={index} value={item}>{item}</DropdownOption>
-  ))
-
-  const options = ['', '20', '30', '40', '50', '60', '70', '80', '90', '100', '110','120','130','140','150','160','170','180','190','200','210']; 
 
   return (
-
-    <><Dropdown onChange={(value) => handleChange(value, 'makes')} value={selectedMakesOption}>
-      <DropdownOption value="">Enter the text</DropdownOption>
-      {makesAll}
-    </Dropdown>
-    <Dropdown onChange={(value) => handleChange(value, 'price')} value={selectedPriceOption}>
-      {options.map((option, index) => (
-        <DropdownOption key={index} value={option}>
-          {option ? `$${option}` : 'To $'}
-        </DropdownOption>
-      ))}
-    </Dropdown>
-
-    
-    </>
-    
+    <DropdownWrap onSubmit={handleSubmit}>
+      {/*       
+      <SelectWrap>
+  
+    </SelectWrap> */}
+      <Select
+        defaultValue={selectedMakesOption}
+        value={selectedMakesOption}
+        onChange={setSelectedMakesOption}
+        options={makeOption}
+        placeholder="Enter text"
+      />
+      <Select
+        defaultValue={selectedPriceOption}
+        value={selectedPriceOption}
+        onChange={setSelectedPriceOption}
+        options={priceOption}
+        placeholder="To $"
+      />
+      <SearchButton type="submit">Search</SearchButton>
+    </DropdownWrap>
   );
 };
 
