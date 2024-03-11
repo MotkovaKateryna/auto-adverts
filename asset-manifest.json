@@ -1,25 +1,29 @@
 {
   "files": {
     "main.css": "/auto-adverts/static/css/main.7acaea2f.css",
-    "main.js": "/auto-adverts/static/js/main.bbefe177.js",
-    "static/js/680.da95b6fc.chunk.js": "/auto-adverts/static/js/680.da95b6fc.chunk.js",
-    "static/js/494.0264724d.chunk.js": "/auto-adverts/static/js/494.0264724d.chunk.js",
-    "static/js/413.cb2ac4e0.chunk.js": "/auto-adverts/static/js/413.cb2ac4e0.chunk.js",
+    "main.js": "/auto-adverts/static/js/main.28642aad.js",
+    "static/css/904.37b0e180.chunk.css": "/auto-adverts/static/css/904.37b0e180.chunk.css",
+    "static/js/904.7a49dfe7.chunk.js": "/auto-adverts/static/js/904.7a49dfe7.chunk.js",
+    "static/js/494.2c215fa7.chunk.js": "/auto-adverts/static/js/494.2c215fa7.chunk.js",
+    "static/js/413.b89808e2.chunk.js": "/auto-adverts/static/js/413.b89808e2.chunk.js",
     "static/js/170.bcfb31b4.chunk.js": "/auto-adverts/static/js/170.bcfb31b4.chunk.js",
     "static/js/437.df1b1caf.chunk.js": "/auto-adverts/static/js/437.df1b1caf.chunk.js",
+    "static/js/595.d31f43ad.chunk.js": "/auto-adverts/static/js/595.d31f43ad.chunk.js",
     "static/js/864.c3b99312.chunk.js": "/auto-adverts/static/js/864.c3b99312.chunk.js",
     "index.html": "/auto-adverts/index.html",
     "main.7acaea2f.css.map": "/auto-adverts/static/css/main.7acaea2f.css.map",
-    "main.bbefe177.js.map": "/auto-adverts/static/js/main.bbefe177.js.map",
-    "680.da95b6fc.chunk.js.map": "/auto-adverts/static/js/680.da95b6fc.chunk.js.map",
-    "494.0264724d.chunk.js.map": "/auto-adverts/static/js/494.0264724d.chunk.js.map",
-    "413.cb2ac4e0.chunk.js.map": "/auto-adverts/static/js/413.cb2ac4e0.chunk.js.map",
+    "main.28642aad.js.map": "/auto-adverts/static/js/main.28642aad.js.map",
+    "904.37b0e180.chunk.css.map": "/auto-adverts/static/css/904.37b0e180.chunk.css.map",
+    "904.7a49dfe7.chunk.js.map": "/auto-adverts/static/js/904.7a49dfe7.chunk.js.map",
+    "494.2c215fa7.chunk.js.map": "/auto-adverts/static/js/494.2c215fa7.chunk.js.map",
+    "413.b89808e2.chunk.js.map": "/auto-adverts/static/js/413.b89808e2.chunk.js.map",
     "170.bcfb31b4.chunk.js.map": "/auto-adverts/static/js/170.bcfb31b4.chunk.js.map",
     "437.df1b1caf.chunk.js.map": "/auto-adverts/static/js/437.df1b1caf.chunk.js.map",
+    "595.d31f43ad.chunk.js.map": "/auto-adverts/static/js/595.d31f43ad.chunk.js.map",
     "864.c3b99312.chunk.js.map": "/auto-adverts/static/js/864.c3b99312.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.bbefe177.js"
+    "static/js/main.28642aad.js"
   ]
 }
