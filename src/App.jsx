@@ -2,10 +2,9 @@ import { lazy, Suspense, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-import Navigation from 'modules/Navigation/Navigation';
-
 import Loader from 'shared/Loader/Loader';
 import { fetchAdverts } from './redux/adverts/advert-operations';
+import { Header } from 'modules/Header/Header';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const CatalogPage = lazy(() => import('./pages/CatalogPage/CatalogPage'));
@@ -27,7 +26,7 @@ export const App = () => {
   }, [dispatch]);
   return (
     <>
-      <Navigation />
+      <Header/>
       <Suspense fallback={<Loader />}>
         <Routes>
           {appRoutes.map(({ path, element }) => (

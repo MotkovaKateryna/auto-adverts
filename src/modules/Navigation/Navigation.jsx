@@ -5,6 +5,7 @@ import { StyledMenu, StyledNavLink } from './Navigation.styled';
 const Navigation = () => {
   return (
     <header>
+      
   <StyledMenu>
     <StyledNavLink to ="/">Home</StyledNavLink>
     <StyledNavLink to ="/catalog">Catalog</StyledNavLink>
